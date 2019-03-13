@@ -1,3 +1,24 @@
-<p>
-  heroes-list works!
-</p>
+<ul class="heroes">
+  <li [class.selected]="hero === selectedHero" (click)="selectHero(hero)" *ngFor="let hero of heroes">
+    <span class="badge">{{ hero.id }}</span>
+    <span class="text">{{ hero.name }}</span>
+  </li>
+</ul> -->
+<button (click)="addHero()">Rajoute un hero</button>
+Nom du hero <input type="text" name="heroToAdd" id="HeroName" [(ngModel)]="heroToAdd" />
+<app-hero-details [hero]="selectedHero" *ngIf="selectedHero"></app-hero-details>
+
+<!-- <section *ngIf="selectedHero">
+  <h2>Détails du Héros {{ selectedHero.name }}</h2>
+  <div><span> {{ selectedHero.id }} </span>{{ selectedHero.name }}</div>
+</section> -->
+
+<!-- <li class="selected btn btn success"></li>
+class L1 {
+  class : {
+    selected: true,
+    btn: true,
+    btn-success: true
+  }
+}
+-->

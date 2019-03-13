@@ -1,19 +1,17 @@
 <!--The content below is only a placeholder and can be replaced.-->
 
   <h1>
-    Bienvenue dans la tour des {{heroes.length}} Héros!
+    Bienvenue dans la tour des Héros!
   </h1>
-  
+
 <!-- for(var el in monTableau) {
 
-} 
+}
 for(var i = 0; i<monTableau.lenght; i++ {
   var el = monTableau[i];
 }-->
-<p>
-  Bonjour, {{ name | uppercase }}
-</p>
-<app-heroes-list></app-heroes-list>
+
+
 <!-- <ul>
   <li *ngFor="let hero of heroes">{{ hero }} <span *ngIf="hero === name">(c'est moi !)</span></li>
 </ul> -->
@@ -21,8 +19,7 @@ for(var i = 0; i<monTableau.lenght; i++ {
 
 }) -->
 <!-- two way binding, () template vers script, [] template vers script -->
-votre nom : <input type="text" name="name" id="MyName" [(ngModel)]="name" />
-<button (click)="addHero()">Rajoute un hero</button>
-Nom du hero <input type="text" name="heroToAdd" id="HeroName" [(ngModel)]= "heroToAdd"/>
+
+
 
 <router-outlet></router-outlet>
